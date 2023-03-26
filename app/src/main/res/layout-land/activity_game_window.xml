@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171717"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/scoreCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnThrow"
+        android:layout_width="340dp"
+        android:layout_height="49dp"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/throw_button"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetScoreCard"
+        app:layout_constraintVertical_bias="0.096"
+        app:rippleColor="#918484"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnScore"
+        android:layout_width="340dp"
+        android:layout_height="49dp"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/score_button"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnThrow"
+        app:layout_constraintVertical_bias="0.228"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/scoreCard"
+        android:layout_width="340dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="28dp"
+        app:cardBackgroundColor="#1C1C1C"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="@+id/botPlayGroundCard"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            android:paddingStart="200dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/mainPageTitle"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/playerScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Player_score"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/botScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Bot_score"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="168dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/game_play_page_card_image"
+                android:rotationY="180"
+                app:srcCompat="@drawable/card_side_dsg" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/botPlayGroundCard"
+        android:layout_width="340dp"
+        android:layout_height="152dp"
+        android:background="#1C1C1C"
+        app:cardBackgroundColor="#1C1C1C"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:text="@string/bot_card_title"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:srcCompat="@drawable/dice_value_box" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/diceSelectorGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/radioDice01"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:button="@drawable/dice_selector"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/radioDice02"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:button="@drawable/dice_selector"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/radioDice03"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:button="@drawable/dice_selector" />
+
+            <CheckBox
+                android:id="@+id/radioDice04"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:button="@drawable/dice_selector" />
+
+            <CheckBox
+                android:id="@+id/radioDice05"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:button="@drawable/dice_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playerDiceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playerDice1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/bot_dice_01"
+                android:visibility="visible"
+                app:srcCompat="@drawable/dice1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playerDice2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/bot_dice_02"
+                app:srcCompat="@drawable/dice2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playerDice3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/bot_dice_03"
+                app:srcCompat="@drawable/dice3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playerDice4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/bot_dice_04"
+                app:srcCompat="@drawable/dice4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playerDice5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/bot_dice_05"
+                app:srcCompat="@drawable/dice5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/playerDiceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="3dp"
+                android:text="@string/player_dice_value"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playerPlayGroundCard"
+        android:layout_width="340dp"
+        android:layout_height="152dp"
+        app:cardBackgroundColor="#1C1C1C"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botPlayGroundCard">
+
+        <LinearLayout
+            android:id="@+id/botDiceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/botDice1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/player_dice_01"
+                app:srcCompat="@drawable/dice1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/botDice2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/player_dice_02"
+                app:srcCompat="@drawable/dice2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/botDice3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/player_dice_03"
+                app:srcCompat="@drawable/dice3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/botDice4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/player_dice_04"
+                app:srcCompat="@drawable/dice4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/botDice5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/player_dice_05"
+                app:srcCompat="@drawable/dice5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:text="@string/player_card_title"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:srcCompat="@drawable/dice_value_box" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/botDiceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="3dp"
+                android:text="@string/bot_dice_value"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/targetScoreCard"
+        android:layout_width="340dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#1C1C1C"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCard"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/targetScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#1C1C1C"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/target_Score"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/botPlayGroundCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreCard"
+            app:layout_constraintVertical_bias="0.524" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

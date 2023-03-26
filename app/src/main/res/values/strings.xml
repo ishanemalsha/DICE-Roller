@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Dice</string>
+    <string name="dice">Dice</string>
+    <string name="mainPageTitle">Dice</string>
+    <string name="Player_score">Your Score: 0</string>
+    <string name="Bot_score">Bot Score: 0</string>
+    <string name="game_play_page_card_image">Game play page card image</string>
+    <string name="bot_card_title">Bot</string>
+    <string name="bot_dice_01">Bot Dice 01</string>
+    <string name="bot_dice_03">Bot Dice 03</string>
+    <string name="bot_dice_04">Bot Dice 04</string>
+    <string name="bot_dice_05">Bot Dice 05</string>
+    <string name="bot_dice_02">Bot Dice 02</string>
+    <string name="player_dice_01">Player Dice 01</string>
+    <string name="player_dice_02">Player Dice 02</string>
+    <string name="player_dice_03">Player Dice 03</string>
+    <string name="player_dice_04">Player Dice 04</string>
+    <string name="player_dice_05">Player Dice 05</string>
+    <string name="player_card_title">You</string>
+    <string name="throw_button">Throw</string>
+    <string name="player_dice_value">0</string>
+    <string name="bot_dice_value">0</string>
+    <string name="score_button">Score</string>
+    <string name="player_score_placeholder">0</string>
+    <string name="bot_score_placeholder">0</string>
+    <string name="target_Score">Target Score: 0</string>
+    <string name="you_won_text">You Won!</string>
+    <string name="you_lose_text">You Lose!</string>
+    <string name="ok_button">Ok</string>
+</resources>
