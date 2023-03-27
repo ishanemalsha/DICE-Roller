@@ -1,6 +1,8 @@
 # DICE-Roller 🎲
 Dice: A fun and interactive Android game app built with Kotlin.
 
+Dice is an Android app developed in Kotlin that simulates a classic dice game where a human player competes against the computer. The objective is to reach a score of 101 or more by throwing five dice as many times as necessary. After each roll, the player can choose to score or take up to two optional rerolls. The game continues until one of the players reaches the target score or a tiebreaker is necessary.
+
 ## Features ⚙️
 - Play against a bot in a classic dice game
 - Reroll any or all of the dice to try to maximize your score
